@@ -1,0 +1,61 @@
+@charset "UTF-8"; /* Aqui nos usamos o Arroba (@) para declararmos regras e a Regra que declaramos aqui foi (@charset "UTF-8";) para que o nosso Css reconheça outros Caracteres do Teclado.*/
+
+/* ---------------------------- */
+/* Esta parte do Código abaixo é muito Importante. Póis se tivermos estes Pedaço de Código em qualquer outro projeto todos os Elementos, todas as Tags do Html vão começar juntas no mesmo lugar, na mesma posiç~~ao da Tela, sempre começando no Canto Superior Direito. */
+*{/* Aqui nos usamos o Asterisco (*) para criarmos o Seletor de "Configurações Globais"*/
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* ---------------------------- */
+
+html, body{ /* Aqui nos estamos Cinfigurando a Tag (html) e a Tag (body).*/
+    /* Aqui nos estamos configurando a Altura e Largura do nosso Site.*/
+    height: 100vh; /* Aqui nos estamos dizendo que a Altura (height) será (100vh), ou seja, ocupará a Altura Total do Site relativo ao Tamanho em Px do Display do Dispositivo, sejá um Celular, uma Tv ou um Notebook.*/
+    width: 100vw; /* Aqui nos estamos dizendo que a Altura (width) será (100vw), ou seja, ocupará a Largura Total do Site relativo ao Tamanho em Px do Display do Dispositivo, sejá um Celular, uma Tv ou um Notebook.*/
+
+    /* Obs : Com "Relativo ao Tamanho em Px do Display do Dispositivo" estamos querendo dizer que o Conteúdo da Tag (html) e da Tag (body) vão se adaptar corretamente para ocuparem todo o espaço da Tela do Dispositivo.*/
+
+}
+
+/* A cima nos criamos um Seletor para Configurarmos as Tags (html) e a Tag (body), agora nos vamos criar um Seletor para Configurarmos apenas a Tag (body) para botarmos uma imagem como Plano de Fundo.*/
+body{
+    background: url("../pacote-d013/pacote-d013/imagens/fundo-madeira.jpg") no-repeat top center; /* Aqui nos usamos o (background) para passarmos a (url) da nossa Imagem, E informamamos com o (no-repeat) para a Imagem não repetir, também informamos que o Ponto de Partida da Imagem vai ser o Pixel que está (top center) ou sejá, no Topo do centro da imagem.*/
+    background-size: cover; /* Aqui nos configuramos o (background-size) como ("cover") que é para essta Imagem de Background cobrir toda a Página.*/
+    background-attachment: fixed; /* Aqui nos configuramos o (background-attchament) como ("fixed") que é para que a Imagem fique anexada evitando Rolagem Vertical, Inclusive A Tradução de "Attchament" é "Anexo".*/
+}
+
+main{ /* Aqui nos Criamos o Seletor para as Configurações da Tag (main) mas eu quero chamar a sua Atenção para que Você lembre que no nosso Documento Html a Tag (main) possui outras duas Tags dentro dela, sendo duas Tag's (section) cada uma tem um (id) mas isso é só um pequeno detalhe que usaremos para configurarmos as Sections Futuramente.*/
+
+    position: relative; /* Como a Tag (main) tem outras Tag's dentro de si mesma, nos temos interesse em Alterarmos o Posicionamento das outras Tag's que estão dentro da Tag (main), portanto, devemos Configurar o Posicionamento da Tag (main) como ("relative") que é o que acabamos de fazer aqui.*/
+
+    height: 100vh;
+    /*background-color: green;*/
+    /* Bem nos não precisamos configurar a Largura da Tag (main) póis ele tem um (Box-model) semelhante ao (Box-model) da Tag (p) ou (h1) que vai até o Final da Linha.*/
+}
+
+section#telefone{ /* Aqui nos criamos o Seletor para a nossa Tag (section) mas é para a Tag que tem o (id) de ("telefone").*/
+    /* Bem como você deve saber esta Tag (section) está dentro /"é filho" da Tag (main) e a Tag (main) nos já Configuramos a sua Posição.*/
+
+    /* Agora nos vamos Configurar o Posicionamento da Tag (section), nos vamos atribuir o seu (position) como ("absolute") vejá:*/
+    position: absolute; /* Depois de termos feito isso ´´e que ganhamos acesso as Outras Propriedades de Posicionamento como (left, right, bottom e etc...) mas estas Configurações seram Aplicadas apenas para esta Tag (section) aqui com este (id) e só vão funcionar se a "Tag pai" que é o nosso (main) também estiver com o seu Posicionamento Configurado que é o que fizemos lá em cima do Código.*/
+
+    /* Agora nos vamos Centralizar este Nosso (section) mas temos uma Peculiaridade aqui, vejá:*/
+    top: 50%; /* Aqui nos afastamos em (50%) do Topo da Página.*/
+    left: 50%; /* Aqui nos afastamos em (50%) da Esquerda da Página.*/
+    /* Aqui nos Escrevemos "Afastamos" porque estas Propriedades (top, left, bottom e etc..) não centralizam corretamente, portanto é mais viavel dizermos que elas "afastam" póis isso elas fazem corretamente.*/
+
+    /* Agora para nos centralizarmos de fato o nosso (Section) sempre no Meio da Viewport nos vamos fazer algu que já fizemos antes, vejá:*/
+
+    transform: translate(-50%, -50%);
+
+    /* Esta "Translação"/Movimentação vai partir do Ponto de Origem da Tag que é localizado no Canto superior Esquerdo dela, é sempre aquele Pixel ali.*/
+
+    height: 627px; /* Aqui nos estamos Definindo a Altura, Largura e Cor de fundo desta Tag (section).*/
+    width: 311px;
+    /*background-color: blue;*/
+
+    /* Agora nos vamos colocar a Imagen do nosso Celular aqui pelo nosso Arquivo Css, isso nos já fizemos várias vezes, barsta fazermos da seguinte forma.*/
+    background: url("../pacote-d013/pacote-d013/imagens/frame-iphone.png") no-repeat; /* Aqui nos usamos um (no-repeat) apenas para evitarmos com que a Imagem fique se repetindo, no entanto, devido à uma diferença de Tamanho de Pixels entre o nosso Fundo azul e a nossa Imagem, nos vamos ter que remover o Background-color : blue; do nosso Section e atribuirmos no nosso Section o Tamanho ideal da nossa Imagem em Pixels.*/
+
+}
