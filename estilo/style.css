@@ -40,6 +40,10 @@ section#telefone{ /* Aqui nos criamos o Seletor para a nossa Tag (section) mas �
     /* Agora nos vamos Configurar o Posicionamento da Tag (section), nos vamos atribuir o seu (position) como ("absolute") vejá:*/
     position: absolute; /* Depois de termos feito isso ´´e que ganhamos acesso as Outras Propriedades de Posicionamento como (left, right, bottom e etc...) mas estas Configurações seram Aplicadas apenas para esta Tag (section) aqui com este (id) e só vão funcionar se a "Tag pai" que é o nosso (main) também estiver com o seu Posicionamento Configurado que é o que fizemos lá em cima do Código.*/
 
+    /* 🟢 position: absolute; (ABSOLUTO)
+    👉 O elemento sai do seu lugar normal e vai para um novo lugar fixo!
+    👉 Ele não deixa um espaço vazio onde estava antes.*/
+
     /* Agora nos vamos Centralizar este Nosso (section) mas temos uma Peculiaridade aqui, vejá:*/
     top: 50%; /* Aqui nos afastamos em (50%) do Topo da Página.*/
     left: 50%; /* Aqui nos afastamos em (50%) da Esquerda da Página.*/
@@ -58,4 +62,29 @@ section#telefone{ /* Aqui nos criamos o Seletor para a nossa Tag (section) mas �
     /* Agora nos vamos colocar a Imagen do nosso Celular aqui pelo nosso Arquivo Css, isso nos já fizemos várias vezes, barsta fazermos da seguinte forma.*/
     background: url("../pacote-d013/pacote-d013/imagens/frame-iphone.png") no-repeat; /* Aqui nos usamos um (no-repeat) apenas para evitarmos com que a Imagem fique se repetindo, no entanto, devido à uma diferença de Tamanho de Pixels entre o nosso Fundo azul e a nossa Imagem, nos vamos ter que remover o Background-color : blue; do nosso Section e atribuirmos no nosso Section o Tamanho ideal da nossa Imagem em Pixels.*/
 
+}
+
+/* Bem agora nos vamos Crair um Seletor para o Nosso (iframe) que é o Conteúdo Principal da tela do nosso Telefone.*/
+iframe#tela{
+    /* Como você deve saber este nosso (iframe) é "filho" destas Tags que possuem estes Posicionamentos :.*/
+
+    /*main -> (position: relative;)*/
+        /*section -> (position: absolute;)*/
+            /*iframe -> (position:relateve;)*/
+
+    /* Obs : Se nos declararmos o (position) de uma Tag como ("relative" ou "absolute") poderemos obter acesso e modificar seu posicionamento com as Novas Propriedades que obtemos após fazer isso, como por exemplo : (top, left, bottom e etc ...).*/
+    position: relative; /* position: relative; (RELATIVO)
+    🔴 👉 O elemento fica no seu lugar normal, mas pode ser empurrado um pouco para o lado sem sair do fluxo da página.*/
+
+    /*
+    RESUMÃO FINAL ⚠️
+    Tipo	Fica no lugar normal?	Se move baseado em quem?	    O espaço original fica vazio?
+    relative	✅ Sim	            Onde ele estava antes	                ❌ Não
+    absolute	❌ Não	        No elemento relative acima dele ou no body	✅ Sim
+    */
+
+    top: 80px; /*Aqui nois estamos afastando 80px do Topo.*/
+    left: 22px; /*Aqui nois estamos afastando 22px da Esquerda.*/
+    width: 269px; /*Aqui nois estamos definindo a Largura da nossa Imagem.*/
+    height: 471px; /*Aqui nois estamos definindo a Altura da nossa Imagem.*/
 }
