@@ -90,10 +90,30 @@
     <main>
         <section id="telefone">
             <!-- Aqui nesta Tag (section) nos vamos carregar o Conteúdo de uma Página Html dentro de outra Página Html, faremos isso usando a Tag (iframe), vejá:-->
-             <iframe src="home.html" name="tela" id="tela" frameborder="0"></iframe> <!-- A Página que estamos Carregando aqui neste (iframe) é na Verdade o nosso Documento (home.html).-->
+             <iframe src="home.html" name="tela" id="tela" frameborder="0">
+                Seu Navegador não é compativel com isso <!-- Aqui dentro da Tag (iframe) nos devemos deixar algo caso o Navegador do úsuario não sejá compativel com está Tag, aqui nos deixamos apenas está Mensagem mesmo.-->
+             </iframe> <!-- A Página que estamos Carregando aqui neste (iframe) é na Verdade o nosso Documento (home.html).-->
              <!--Veja que nos também criamos dois Parâmetros nesta Tag, o Parâmetro (name="tela") e o (id = "tela"), fizemos isso póis vamos usar este (id) para trabalharmos com a Estilização desta Tag no Css.-->
         </section>
-        <section id="redes-sociais"></section>
+        <section id="redes-sociais">
+            <!--Aula 5/ Vídio 14 do Cap 23 do Modulo 4-->
+            <!-- Nesta Aula nos Vamos criar os Botões que vão ser os Ícones das nossas Redes Socias, estes Botões seram clicaveis.-->
+            <!-- Aqui nesta (section) nos vamos criar os Botões e eles seram os Ícones daas nossas Redes Socias, faremos eles usando a Tag (a) póis ele vão ser Links.-->
+             <a href="#" target="tela"> <!-- Aqui nos temos a nossa Tag (a) que adicionamos o Parâmetro (target = "tela").
+                Dentro desta Tag nos vamos ter A Imagem do Ícone Correspondente a Cada Rede Social que iremos colocar aqui.-->
+                <img src="pacote-d013/pacote-d013/imagens/logo-home.jpg" alt="Home"> <!-- Como o Primeiro Botão será o Ícone de "Home" que vamos adicionar aqui então nos atribuimos ao Parâmetro (alt) da Tag (img) o valor ("Home"), póis, esta é uma Breve explicação deste Primeiro Botão.-->
+
+             </a> <br>
+             <a href="#" target="tela">
+                <img src="pacote-d013/pacote-d013/imagens/logo-youtube.jpg" alt="Youtube">
+             </a> <br>
+             <a href="#" target="tela"><img src="pacote-d013/pacote-d013/imagens/logo-github.jpg" alt="Github"></a> <br>
+             <a href="#" target="tela"><img src="pacote-d013/pacote-d013/imagens/logo-instagram.jpg" alt="Instagram"></a> <br>
+             <a href="#" target="tela"><img src="pacote-d013/pacote-d013/imagens/logo-twitter.jpg" alt="Twitter"></a> <br>
+             <a href="#" target="tela"><img src="pacote-d013/pacote-d013/imagens/logo-facebook.jpg" alt="Facebook"></a>
+             <!-- Pronto aqui agora nos já criamos todos os Botões, agora nos vamos configurar a Estilização deles com o Css.-->
+              <!-- Para fazermos com que cada Botão fique um em baixo do outro nos vamos usar a Tag (br) logo depois das Tag (a) vejá no codigo acima.-->
+        </section>
     </main>
     
 

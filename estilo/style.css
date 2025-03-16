@@ -88,3 +88,49 @@ iframe#tela{
     width: 269px; /*Aqui nois estamos definindo a Largura da nossa Imagem.*/
     height: 471px; /*Aqui nois estamos definindo a Altura da nossa Imagem.*/
 }
+section#redes-sociais{ /* Bem antes de prosseguirmos eu tenho que explicar algu muito importante sobre o como o Código consegui tratar as nossa Imagens da Tag (img) como um Texto e Mudar as nossas Imagens que antes estavam na Esquerda da Página para a Direita dela.*/
+
+    /*A nossa "Hierarquia de Tags" onde os nossos Botões se encontram no nosso Documento (index.html) é a seguinte:*/
+    /* main
+        section (id = "redes-sociais")
+            a
+                img
+    */
+
+    /*Como as nossas Imagens (img) estão dentro da Tag (a) que é uma Tag de "Texto" nos conseguimos usar o (text-align: right;) para mover o Conteúdo que são as Imagens para à Direita da Página. Este seletor aplica estas Configurações a Tag (section) e as outras Tag's dentro dele mas o fato das Imagens (img) estarem dentro da tag (a) provavelmente ajuda neste "processo"*/
+    text-align: right;
+}
+
+section#redes-sociais img{ /* Antes de prosseguirmos com a Estilização dos nosso Botões correspondentes aos Ícones das nossas Redes sociais eu quero comentar algumas coisas.*/
+
+    /*A nossa "Hierarquia de Tags" onde os nossos Botões se encontram no nosso Documento (index.html) é a seguinte:*/
+    /* main
+        section (id = "redes-sociais")
+            a
+                img
+    */
+
+    /* Nos criamos este Seletor com : (section#redes-sociais img{})*/
+    /* Para Obter um resultado semelhante nos poderiamos ter criado este Seletor com : (section#redes-sociais > a > img{})*/
+
+    /* Agora sim nos vamos voltar para a Estilização dos nossos Botões correspondestes aos Ícones das nossas Redes Sociais.*/
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%; /* Aqui nos Atribuimos o (border-radius:) o valor de (50%;) desta Forma nos conseguimos fazer com que as nossas Imagens que antes eram Quadriculadas agora fiquem bem arredondadas.*/
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.400);
+    /* Os nossos Botões estão um ao lado do outro mas nos vamos fazer com que eles fiquem um em baixo do outro. Para isso vamos voltar para o nosso Código (index.html) na Linha 115*/
+
+    /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+    /* Código Novo*/
+    box-sizing: border-box; /*Isto faz com que outros elementos adicionados Futuramente como (border) façam parte do Box-Model sem causar uma Dilatação ou Deslocamento no Proprio (Box-Model), isso permite alguns efeitos interativos como Animações, vamos fazer um jájá.*/
+    /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+
+}
+
+section#redes-socias img:hover{ /*Neste seletor nos estamos criando um efeito de Animação quando passamos o Mouse por cima dos nossos Botões.*/
+    border: 2px solid rgb(255, 255, 255);
+    transform: translate(-3px, -3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.615);
+    transition: transform 0.3s; /*Aqui estamos configurando o tempo de daly que terá nesta nossa Animação*/
+
+}
