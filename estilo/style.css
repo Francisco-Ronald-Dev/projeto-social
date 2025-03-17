@@ -85,7 +85,7 @@ iframe#tela{
 
     top: 80px; /*Aqui nois estamos afastando 80px do Topo.*/
     left: 22px; /*Aqui nois estamos afastando 22px da Esquerda.*/
-    width: 269px; /*Aqui nois estamos definindo a Largura da nossa Imagem.*/
+    width: 267px; /*Aqui nois estamos definindo a Largura da nossa Imagem.*/
     height: 471px; /*Aqui nois estamos definindo a Altura da nossa Imagem.*/
 }
 section#redes-sociais{ /* Bem antes de prosseguirmos eu tenho que explicar algu muito importante sobre o como o Código consegui tratar as nossa Imagens da Tag (img) como um Texto e Mudar as nossas Imagens que antes estavam na Esquerda da Página para a Direita dela.*/

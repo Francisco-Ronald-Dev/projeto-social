@@ -90,7 +90,7 @@
     <main>
         <section id="telefone">
             <!-- Aqui nesta Tag (section) nos vamos carregar o Conteúdo de uma Página Html dentro de outra Página Html, faremos isso usando a Tag (iframe), vejá:-->
-             <iframe src="home.html" name="tela" id="tela" frameborder="0">
+             <iframe src="home.html" name="tela" id="tela" frameborder="0" >
                 Seu Navegador não é compativel com isso <!-- Aqui dentro da Tag (iframe) nos devemos deixar algo caso o Navegador do úsuario não sejá compativel com está Tag, aqui nos deixamos apenas está Mensagem mesmo.-->
              </iframe> <!-- A Página que estamos Carregando aqui neste (iframe) é na Verdade o nosso Documento (home.html).-->
              <!--Veja que nos também criamos dois Parâmetros nesta Tag, o Parâmetro (name="tela") e o (id = "tela"), fizemos isso póis vamos usar este (id) para trabalharmos com a Estilização desta Tag no Css.-->
@@ -99,20 +99,31 @@
             <!--Aula 5/ Vídio 14 do Cap 23 do Modulo 4-->
             <!-- Nesta Aula nos Vamos criar os Botões que vão ser os Ícones das nossas Redes Socias, estes Botões seram clicaveis.-->
             <!-- Aqui nesta (section) nos vamos criar os Botões e eles seram os Ícones daas nossas Redes Socias, faremos eles usando a Tag (a) póis ele vão ser Links.-->
-             <a href="#" target="tela"> <!-- Aqui nos temos a nossa Tag (a) que adicionamos o Parâmetro (target = "tela").
+             <a href="home.html" target="tela"> <!-- Aqui nos temos a nossa Tag (a) que adicionamos o Parâmetro (target = "tela").
                 Dentro desta Tag nos vamos ter A Imagem do Ícone Correspondente a Cada Rede Social que iremos colocar aqui.-->
                 <img src="pacote-d013/pacote-d013/imagens/logo-home.jpg" alt="Home"> <!-- Como o Primeiro Botão será o Ícone de "Home" que vamos adicionar aqui então nos atribuimos ao Parâmetro (alt) da Tag (img) o valor ("Home"), póis, esta é uma Breve explicação deste Primeiro Botão.-->
 
              </a> <br>
-             <a href="#" target="tela">
+             <a href="youtube.html" target="tela">
                 <img src="pacote-d013/pacote-d013/imagens/logo-youtube.jpg" alt="Youtube">
              </a> <br>
-             <a href="#" target="tela"><img src="pacote-d013/pacote-d013/imagens/logo-github.jpg" alt="Github"></a> <br>
-             <a href="#" target="tela"><img src="pacote-d013/pacote-d013/imagens/logo-instagram.jpg" alt="Instagram"></a> <br>
-             <a href="#" target="tela"><img src="pacote-d013/pacote-d013/imagens/logo-twitter.jpg" alt="Twitter"></a> <br>
-             <a href="#" target="tela"><img src="pacote-d013/pacote-d013/imagens/logo-facebook.jpg" alt="Facebook"></a>
+             <a href="github.html" target="tela"><img src="pacote-d013/pacote-d013/imagens/logo-github.jpg" alt="Github"></a> <br>
+             <a href="instagram.html" target="tela"><img src="pacote-d013/pacote-d013/imagens/logo-instagram.jpg" alt="Instagram"></a> <br>
+             <a href="twitter.html" target="tela"><img src="pacote-d013/pacote-d013/imagens/logo-twitter.jpg" alt="Twitter"></a> <br>
+             <a href="facebook.html" target="tela"><img src="pacote-d013/pacote-d013/imagens/logo-facebook.jpg" alt="Facebook"></a>
              <!-- Pronto aqui agora nos já criamos todos os Botões, agora nos vamos configurar a Estilização deles com o Css.-->
               <!-- Para fazermos com que cada Botão fique um em baixo do outro nos vamos usar a Tag (br) logo depois das Tag (a) vejá no codigo acima.-->
+
+            <!-- Aula 6 / Vídio 15 do Cap 23 do Módulo 4-->
+            <!-- Agora nos vamos fazer com que o úsuario possa clicar nos Botões e o conteúdo carregado sejá o conteúdo correspondente a Cada botão.-->
+
+            <!-- Ao clicar em algum Botão anteriormente no estavamos obtendo um problema de rolagem lateral e horizontal, eu vou deixar o código responsavel por este Problema logo abaixo:-->
+             <!--<a href="#" target="tela"><img src="pacote-d013/pacote-d013/imagens/logo-github.jpg" alt="Github"></a> <br>-->
+
+             <!-- Bem isso estava acontecendo por que nos estavamos usando a HashTag ("#") no Parâmetro (href) da Tag (a).-->
+              <!-- Este é o problema que vamos corrigir mas antes de avançarmos quero que você entenda que o Conteúdo que vamos exibir após clicarmos em um destes botões não é uma nova Instância do Navegador acessando aquele Link, o que vamos exibir é apenas uma imagem muito grande, uma print correspondente a cada um dos Botões, agora vamos lá corrigir este pequeno erro.-->
+            
+            <!-- Para nos conseguirmos corrigir este Pequeno erro nos devemos pegar as Imagens que temos e devemos criar um Documento (html) para cada uma delas, semelhante ao que fizemos com a Imagem ("Home"), no (iframe) da linha 93 nos carregamos o Documento (Home.html) e não a Imagem, se fizermos a mesma coisa para as outras Imagens nos iremos conseguir solucionar este Problema da Rolagem Horizontal e Lateral.-->
         </section>
     </main>
     
